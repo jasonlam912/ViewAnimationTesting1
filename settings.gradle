@@ -1,0 +1,2 @@
+rootProject.name='ViewAnimationTesting1'
+include ':app'

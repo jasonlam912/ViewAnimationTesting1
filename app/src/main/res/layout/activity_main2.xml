@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+
+    <View
+        android:id="@+id/spring_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/circle_view_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/next_sample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="next_sample"
+        android:transitionName="transition_button"
+        android:onClick="nextActivity"
+        app:layout_constraintBottom_toTopOf="@+id/spring_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/fade_out_button"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="fadeOut"
+        android:text="Fade Out"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/next_sample"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/translation_button"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:onClick="translation"
+        android:text="Translation"
+        android:textSize="8sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fade_out_button"
+        app:layout_constraintStart_toEndOf="@+id/fade_out_button" />
+
+    <Button
+        android:id="@+id/enlarge_button"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:onClick="enlarge"
+        android:text="Enlarge"
+        android:textSize="8sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/translation_button"
+        app:layout_constraintStart_toEndOf="@+id/translation_button" />
+
+    <Button
+        android:id="@+id/lessen_button"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="Lessen"
+        android:text="Lessen"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/enlarge_button"
+        app:layout_constraintStart_toStartOf="@+id/enlarge_button" />
+
+    <Button
+        android:id="@+id/rotation_button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:onClick="rotation"
+        android:text="Rotate"
+        android:textSize="8sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/enlarge_button"
+        app:layout_constraintStart_toEndOf="@+id/enlarge_button" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/fade_out_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

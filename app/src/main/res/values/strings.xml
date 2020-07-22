@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ViewAnimationTesting1</string>
+    <string name="rect1_path_data">M8,5 V19 H16 V5 z</string>
+    <string name="rect2_path_data">M5,8 V16 H19 V8 z</string>
+</resources>

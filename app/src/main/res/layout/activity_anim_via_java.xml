@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnimViaJava">
+
+    <Button
+        android:id="@+id/next_sample"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Next Sample"
+        android:transitionName="transition_button"
+        android:onClick="nextSample"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/fade_out_button"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="fadeOut"
+        android:text="Fade Out"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/translation_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/translation_button"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:onClick="translation"
+        android:text="Translation"
+        android:textSize="8sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/fade_out_button"
+        app:layout_constraintEnd_toStartOf="@+id/enlarge_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fade_out_button" />
+
+    <Button
+        android:id="@+id/floating_button"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="floating"
+        android:text="Translation"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/translation_button"
+        app:layout_constraintEnd_toStartOf="@+id/lessen_button" />
+
+    <Button
+        android:id="@+id/enlarge_button"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:onClick="enlarge"
+        android:text="Enlarge"
+        android:textSize="8sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/translation_button"
+        app:layout_constraintEnd_toStartOf="@+id/rotation_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/translation_button" />
+
+    <Button
+        android:id="@+id/lessen_button"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:onClick="lessen"
+        android:text="Lessen"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/enlarge_button"
+        app:layout_constraintStart_toStartOf="@+id/enlarge_button" />
+
+    <Button
+        android:id="@+id/rotation_button"
+        android:layout_width="88dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="rotation"
+        android:text="Rotate"
+        android:textSize="8sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/enlarge_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/enlarge_button" />
+
+
+    <com.jasonstudio.viewanimationtesting1.customview.ShadowView
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <com.jasonstudio.viewanimationtesting1.customview.FloatingImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cook_book_icon_low_res"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

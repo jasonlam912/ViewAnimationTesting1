@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SVGSampleActivity">
+
+    <Button
+        android:id="@+id/next_sample"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Next Sample"
+        android:transitionName="transition_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="changeShape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_sample"
+        app:srcCompat="@drawable/svg_rect" />
+
+    <ImageView
+        android:id="@+id/j_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:onClick="drawJ"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/next_sample"
+        app:srcCompat="@drawable/avd_anim_j" />
+
+    <ImageView
+        android:id="@+id/a_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/j_text"
+        app:layout_constraintTop_toTopOf="@+id/j_text"
+        app:srcCompat="@drawable/avd_anim_a" />
+
+    <ImageView
+        android:id="@+id/s_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/a_text"
+        app:layout_constraintTop_toTopOf="@+id/a_text"
+        app:srcCompat="@drawable/avd_anim_s" />
+
+    <ImageView
+        android:id="@+id/o_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/s_text"
+        app:layout_constraintTop_toTopOf="@+id/s_text"
+        app:srcCompat="@drawable/avd_anim_o" />
+
+    <ImageView
+        android:id="@+id/n_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/o_text"
+        app:layout_constraintTop_toTopOf="@+id/o_text"
+        app:srcCompat="@drawable/avd_anim_n" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Button"
+        android:onClick="showMyName"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/j_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
