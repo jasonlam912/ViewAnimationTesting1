@@ -44,11 +44,45 @@
         android:id="@+id/next_sample"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:text="Next Sample"
         android:transitionName="transition_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/expandableListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="expandLV"
+        android:transitionName="expandLV"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/expandableView"
+        app:layout_constraintStart_toEndOf="@+id/next_sample" />
+
+    <Button
+        android:id="@+id/expandableView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/recyclerexpandableview"
+        android:textSize="10dp"
+        android:transitionName="transition_rev"
+        app:layout_constraintBaseline_toBaselineOf="@+id/next_sample"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/expandListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:text="List View"
+        android:transitionName="expandListView"
+        app:layout_constraintBottom_toTopOf="@id/next_sample"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

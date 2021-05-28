@@ -10,4 +10,6 @@
     <color name="colorActionDown">#80000000</color>
     <color name="blue">#274fe1</color>
     <color name="green">#207040</color>
+    <color name="purple_400">#7E57C2</color>
+    <color name="orange_700">#FBC02D</color>
 </resources>
